@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Moskic - IT support, systems administration, software development, and data analysis."
+    >
+    <meta name="theme-color" content="#f7f7f9">
+    <title>Moskic | moskic.com</title>
+    <script>
+      (() => {
+        try {
+          const storedTheme = localStorage.getItem("theme");
+          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          const theme = storedTheme || (prefersDark ? "dark" : "light");
+          document.documentElement.dataset.theme = theme;
+          document
+            .querySelector('meta[name="theme-color"]')
+            .setAttribute("content", theme === "dark" ? "#08090b" : "#f7f7f9");
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar" aria-label="Site controls">
+        <div class="controls">
+          <button class="icon-button" type="button" id="themeToggle" aria-label="Switch color theme">
+            <svg class="icon sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 4V2m0 20v-2m8-8h2M2 12h2m14.95-6.95 1.42-1.42M3.63 20.37l1.42-1.42m0-13.9L3.63 3.63m16.74 16.74-1.42-1.42M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/>
+            </svg>
+            <svg class="icon moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.4 14.4A8.5 8.5 0 0 1 9.6 3.6 8.5 8.5 0 1 0 20.4 14.4Z"/>
+            </svg>
+            <span class="button-label" id="themeLabel">Theme</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="hero" aria-labelledby="profileName">
+        <section class="intro">
+          <h1 id="profileName">Hi, This is Moskic</h1>
+          <ul class="role-list" aria-label="Professional focus areas">
+            <li>IT Support</li>
+            <li>Systems Administration</li>
+            <li>Software Development</li>
+            <li>Data Analysis</li>
+          </ul>
+          <p class="bio">
+            Works at the intersection of infrastructure, software, and data. The focus is on
+            stable systems, practical automation, open source tooling, and AI-assisted workflows that
+            turn complex technical problems into maintainable solutions. Keep Thinking and Be Creative.
+          </p>
+        </section>
+      </main>
+
+      <section class="links-section" aria-labelledby="linksTitle">
+        <div class="section-heading">
+          <p class="eyebrow">Connect</p>
+          <h2 id="linksTitle">Places where I build, write, and keep things running.</h2>
+        </div>
+
+        <div class="link-list">
+          <a class="link-item" href="https://status.moskic.com/" target="_blank" rel="noreferrer">
+            <span class="link-index" aria-hidden="true">01</span>
+            <span class="link-icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="M4 13.5 8.2 5l4.6 14 3-7H20"/>
+              </svg>
+            </span>
+            <span class="link-copy">
+              <strong>Server Status</strong>
+              <small>All service monitoring in one place.</small>
+            </span>
+            <span class="link-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="link-item" href="https://github.com/moskic" target="_blank" rel="noreferrer">
+            <span class="link-index" aria-hidden="true">02</span>
+            <span class="link-icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="M12 2.5a9.5 9.5 0 0 0-3 18.52c.48.09.66-.2.66-.46v-1.67c-2.68.58-3.25-1.15-3.25-1.15-.44-1.12-1.07-1.42-1.07-1.42-.88-.6.07-.59.07-.59.97.07 1.48 1 1.48 1 .86 1.47 2.26 1.05 2.81.8.09-.62.34-1.05.62-1.29-2.14-.24-4.39-1.07-4.39-4.76 0-1.05.38-1.91 1-2.59-.1-.24-.43-1.22.1-2.55 0 0 .81-.26 2.66.99A9.22 9.22 0 0 1 12 7c.82 0 1.63.11 2.4.33 1.84-1.25 2.65-.99 2.65-.99.53 1.33.2 2.31.1 2.55.62.68 1 1.54 1 2.59 0 3.7-2.25 4.52-4.4 4.76.35.3.66.89.66 1.8v2.52c0 .26.18.56.67.46A9.5 9.5 0 0 0 12 2.5Z"/>
+              </svg>
+            </span>
+            <span class="link-copy">
+              <strong>GitHub</strong>
+              <small>Code, experiments, and open source work.</small>
+            </span>
+            <span class="link-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="link-item" href="https://blog.moskic.com/" target="_blank" rel="noreferrer">
+            <span class="link-index" aria-hidden="true">03</span>
+            <span class="link-icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="M6 4h9l3 3v13H6V4Z"/>
+                <path d="M14 4v4h4M9 12h6M9 16h6M9 8h2"/>
+              </svg>
+            </span>
+            <span class="link-copy">
+              <strong>Blog</strong>
+              <small>Notes and longer thoughts, currently in progress.</small>
+            </span>
+            <span class="link-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="link-item" href="https://t.me/moskic" target="_blank" rel="noreferrer">
+            <span class="link-index" aria-hidden="true">04</span>
+            <span class="link-icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="m20.7 4.3-3.1 15.05c-.23 1.06-.85 1.32-1.72.82l-4.74-3.5-2.28 2.2c-.25.25-.46.46-.95.46l.34-4.84 8.8-7.95c.38-.34-.08-.53-.6-.2L5.58 13.18.9 11.72c-1.02-.32-1.04-1.02.21-1.5L19.4 3.18c.85-.32 1.6.2 1.3 1.12Z"/>
+              </svg>
+            </span>
+            <span class="link-copy">
+              <strong>Telegram</strong>
+              <small>A direct way to reach me.</small>
+            </span>
+            <span class="link-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <footer class="site-footer" aria-label="Site footer">
+        <a href="https://moskic.com">moskic.com</a>
+        <span aria-hidden="true">/</span>
+        <span id="footerYear">2026</span>
+        <span aria-hidden="true">/</span>
+        <time id="footerTime" datetime=""></time>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
